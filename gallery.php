@@ -20,8 +20,10 @@ The pictures will be taken in ascendin order (alphabetically).
 
 <?php $page_name = 'Gallery'; include("meta.php"); $is_gallery = true; ?>
 
-<script type="text/javascript" src="breadcrumb.js"></script>
-<link rel="stylesheet" href="common.css" />
+<script type="text/javascript" src="/breadcrumb.js"></script>
+<script type="text/javascript" src="/jquery.js"></script>
+<script type="text/javascript" src="/gallery/jw/gallery.js"></script>
+<link rel="stylesheet" href="/common.css" />
 
 <?php
 
@@ -163,22 +165,7 @@ else { $image = 0; }
 		<br />
 		<br />
 		<br />
-		<script type='text/javascript' src='gallery/jw/swfobject.js'></script>
-		<div id='mediaspace' style="margin-right: 35px">_</div>
-		<script type='text/javascript'>
-		  var so = new SWFObject('gallery/jw/player.swf','mpl','540','405','9');
-		  so.addParam('allowfullscreen','true');
-		  so.addParam('allowscriptaccess','always');
-		  //so.addParam('wmode','opaque');
-		  so.addVariable('file','http://beta.adventureforest.co.nz/gallery/jw/video.flv');
-		  //so.addVariable('file','http://www.youtube.com/watch?v=aBJQ5085kSo');
-		  so.addVariable('image','http://beta.adventureforest.co.nz/gallery/jw/preview.jpg');
-		  so.addVariable('backcolor','#281D19');
-		  so.addVariable('frontcolor','#F0AA31');
-		  so.addVariable('screencolor','#281D19');
-		  so.addVariable('autostart','true');
-		  so.write('mediaspace');
-		</script>
+		_
 		</div>
 	</div>
 		<div id="layout-foot">&nbsp;</div>
