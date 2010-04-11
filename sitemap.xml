@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+	<url>
+	    <loc>http://www.adventureforest.co.nz/</loc>
+	    <changefreq>weekly</changefreq>
+	    <priority>1.0</priority>
+	</url>
+
+	<url>
+	    <loc>http://www.adventureforest.co.nz/index.php</loc>
+	    <changefreq>weekly</changefreq>
+	    <priority>1.0</priority>
+	</url>
+
+	<url>
+	    <loc>http://www.adventureforest.co.nz/gallery.php</loc>
+	    <changefreq>monthly</changefreq>
+	    <priority>0.8</priority>
+	</url>
+
+	<url>
+	    <loc>http://www.adventureforest.co.nz/location.php</loc>
+	    <changefreq>monthly</changefreq>
+	    <priority>0.8</priority>
+	</url>
+
+	<url>
+	    <loc>http://www.adventureforest.co.nz/pricing.php</loc>
+	    <changefreq>monthly</changefreq>
+	    <priority>0.5</priority>
+	</url>
+
+	<url>
+	    <loc>http://www.adventureforest.co.nz/activities.php</loc>
+	    <changefreq>monthly</changefreq>
+	    <priority>0.5</priority>
+	</url>
+
+	<url>
+	    <loc>http://www.adventureforest.co.nz/safety.php</loc>
+	    <changefreq>monthly</changefreq>
+	    <priority>0.5</priority>
+	</url>
+
+	<url>
+	    <loc>http://www.adventureforest.co.nz/calendar.php</loc>
+	    <changefreq>weekly</changefreq>
+	    <priority>0.8</priority>
+	</url>
+	
+	<url>
+	    <loc>http://www.adventureforest.co.nz/voucher-order</loc>
+	    <changefreq>weekly</changefreq>
+	    <priority>0.8</priority>
+	</url>
+
+</urlset>

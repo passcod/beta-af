@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+<?php $page_name = 'Order a Gift Voucher'; include("../meta.php"); ?>
+
+		<script type="text/javascript" src="/breadcrumb.js"></script>
+		<link rel="stylesheet" href="/common.css" />
+		<style type="text/css">
+			#layout-center
+			{
+				padding-left: 25px;
+			}
+			#layout-center input, textarea, body, table
+			{
+				font-family: Arial, sans-serif;
+				font-size: small;
+			}
+			#layout-center input, textarea, .recaptchatable
+			{
+				border: 1px black solid;
+				-moz-border-radius: 3px;
+				padding-left: 3px;
+				padding-right: 3px;
+			}
+			textarea { padding-top: 3px; padding-bottom: 3px; }
+			select
+			{
+				border: 0px;
+			}
+			#layout-center .opt
+			{
+				width: 70px;
+				text-align: center;
+				background-color: #B59C63;
+			}
+			#layout-center .opt option
+			{
+				text-align: center;
+			}
+			#layout-center table
+			{
+				border-top: 1px black solid;
+				border-left: 1px black solid;
+				-moz-border-radius: 3px;
+			}
+			#layout-center td
+			{
+				border-bottom: 1px black solid;
+				border-right: 1px black solid;
+				-moz-border-radius: 2px;
+			}
+			#layout-center table
+			{
+				width: 300px;
+			}
+			#layout-center input, table, textarea, select
+			{
+				background: transparent;
+			}
+			.red { color: red; }
+		</style>
+		<script type="text/javascript">
+	<?php echo arr2js( $opts, 'opts', 2 ); ?>
+
+	<?php echo arr2js( $cost, 'cost', 2 ); ?>
+		
+		// next i'll be using jquery here. more unobstructive.
+		
+		function js_is_on() // change the audio switch (outside the recaptcha itself) for the js version.
+		{
+			var id = 'audio_recaptcha_link';
+			document.getElementById(id).target = '';
+			document.getElementById(id).href = "javascript:Recaptcha.switch_type('audio');"; // use href : IE can't set events.
+		}
+		
+		function get_sum() // displays the sums in realtime.
+		{
+			var els = Array();
+			var t = 0; var s = 0; var n;
+			for ( n in opts ) { els[n] = document.getElementsByName(opts[n])[0].value; t = t + Number(els[n]); s = s + Number(els[n])*cost[n] }
+			
+			document.getElementById('total').innerHTML = t;
+			document.getElementById('sum').innerHTML = '$'+s;
+		}
+
+		var RecaptchaOptions = {
+		   theme : 'clean'
+		}; // blends better in the site.
+		
+		
+
+		
+		
+// Dean Edwards/Matthias Miller/John Resig
+
+function init() {
+  // quit if this function has already been called
+  if (arguments.callee.done) return;
+
+  // flag this function so we don't do the same thing twice
+  arguments.callee.done = true;
+
+  // kill the timer
+  if (_timer) clearInterval(_timer);
+
+  // do stuff
+  js_is_on();
+  get_sum();
+};
+
+/* for Mozilla/Opera9 */
+if (document.addEventListener) {
+  document.addEventListener("DOMContentLoaded", init, false);
+}
+
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+  document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+  var script = document.getElementById("__ie_onload");
+  script.onreadystatechange = function() {
+    if (this.readyState == "complete") {
+      init(); // call the onload handler
+    }
+  };
+/*@end @*/
+
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { // sniff
+  var _timer = setInterval(function() {
+    if (/loaded|complete/.test(document.readyState)) {
+      init(); // call the onload handler
+    }
+  }, 10);
+}
+
+/* for other browsers */
+window.onload = init;
+
+		</script>
+	</head>
+	<!--<body <?php echo getValue('onload'); ?> >-->
+	<body>
+		<div id="layout-page">
+			<div id="layout-head">
+				<table id="table-head" cellspacing="0" cellpadding="0">
+					<tbody><tr>
+						<td id="cell-1-head" rowspan="2"><a href="/gallery.php"><img alt="header_gallery" src="/images_header/header_01.gif" width="364" height="200" /></a></td>
+						<td id="cell-2-head"><a href="/location.php"><img alt="header_location" src="/images_header/header_02.gif" width="436" height="120" /></a></td>
+					</tr>
+					<tr>
+						<td id="cell-3-head"><a href="/index.php"><img alt="header_index" src="/images_header/header_03.gif" width="436" height="80" /></a></td>
+					</tr>
+				</tbody></table>
+			</div><!-- /layout-head --><a id="Top"></a>
+			<div id="layout-breadcrumb">
+				<table id="table-breadcrumb" cellspacing="0" cellpadding="0">
+					<tbody><tr>
+						<td><a href="/index.php"><img alt="Link to Index" src="/images_nav/button_01.gif" onmouseover="breadcrumb('button-1', false, true)" onmouseout="breadcrumb('button-1', false, false)" id="button-1" width="133" height="30" /></a></td>
+						<td><a href="/gallery.php"><img alt="Link to Gallery" src="/images_nav/button_02.gif" onmouseover="breadcrumb('button-2', false, true)" onmouseout="breadcrumb('button-2', false, false)" id="button-2" width="133" height="30" /></a></td>
+						<td><a href="/location.php"><img alt="Link to Location" src="/images_nav/button_03.gif" onmouseover="breadcrumb('button-3', false, true)" onmouseout="breadcrumb('button-3', false, false)" id="button-3" width="133" height="30" /></a></td>
+						<td><a href="/safety.php"><img alt="Link to Safety" src="/images_nav/button_04.gif" onmouseover="breadcrumb('button-4', false, true)" onmouseout="breadcrumb('button-4', false, false)" id="button-4" width="133" height="30" /></a></td>
+						<td><a href="/pricing.php"><img alt="Link to Pricing" src="/images_nav/button_05.gif" onmouseover="breadcrumb('button-5', false, true)" onmouseout="breadcrumb('button-5', false, false)" id="button-5" width="133" height="30" /></a></td>
+						<td><a href="/activities.php"><img alt="Link to Activities" src="/images_nav/button_06.gif" onmouseover="breadcrumb('button-6', false, true)" onmouseout="breadcrumb('button-6', false, false)" id="button-6" width="133" height="30" /></a></td>
+					</tr>
+				</tbody></table>
+			</div><!-- /layout-breadcrumb -->
+			<div id="layout-center" style="text-align: left">
+<?php if ( !$done ) { ?>
+				<h1>Order a Gift Voucher</h1>
+				<form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']) ?>#" method="post">
+					<p>Please fill this form to place your order:</p>
+					<?php if ( $error ) { ?>
+					<p style="color: red;"><b>Please correct the following errors:</b><br />
+					<?php echo $error; } ?><br /></p>
+
+					<table>
+						<tbody>
+						<?php /* I should use a loop there... */ ?>
+							<tr>
+								<td><?php echo tdField('full_a', $msg); ?></td>
+								<td>Full Pass</td>
+								<td>Adult</td>
+								<td>$32</td>
+							</tr>
+							<tr>
+								<td><?php echo tdField('full_c', $msg); ?></td>
+								<td>Full Pass</td>
+								<td>Child</td>
+								<td>$22</td>
+							</tr>
+							<tr>
+								<td><?php echo tdField('full_f', $msg); ?></td>
+								<td>Full Pass</td>
+								<td>Family</td>
+								<td>$95</td>
+							</tr>
+							<tr>
+								<td><?php echo tdField('adv_a', $msg); ?></td>
+								<td>Adventure Pass</td>
+								<td>Adult</td>
+								<td>$25</td>
+							</tr>
+							<tr>
+								<td><?php echo tdField('adv_c', $msg); ?></td>
+								<td>Adventure Pass</td>
+								<td>Child</td>
+								<td>$17</td>
+							</tr>
+							<tr>
+								<td><?php echo tdField('adv_f', $msg); ?></td>
+								<td>Adventure Pass</td>
+								<td>Family</td>
+								<td>$75</td>
+							</tr>
+							<tr>
+								<td><?php echo tdField('disc_a', $msg); ?></td>
+								<td>Discovery Pass</td>
+								<td>Adult</td>
+								<td>$18</td>
+							</tr>
+							<tr>
+								<td><?php echo tdField('disc_c', $msg); ?></td>
+								<td>Discovery Pass</td>
+								<td>Child</td>
+								<td>$12</td>
+							</tr>
+							<tr>
+								<td><?php echo tdField('disc_f', $msg); ?></td>
+								<td>Discovery Pass</td>
+								<td>Family</td>
+								<td>$50</td>
+							</tr>
+							<tr id="tts">
+								<td><b>Total Items:</b></td>
+								<td id="total">0</td>
+								<td><b>Total Price:</b></td>
+								<td id="sum">$0></td>
+							</tr>
+						</tbody>
+					</table>
+					<p><small>The totals above will only update
+					if JavaScript is enabled</small></p>
+					<br />
+					<p>All of the below fields are required.</p>
+					<p><label for="name">Name: <span class="red">*</span></label><br />
+					<input name="name" type="text" style="width: 300px" value="<?php echo getValue('name'); ?>" /></p>
+					<p><label for="email">Email Address: <span class="red">*</span></label><br />
+					<input name="email" type="text" style="width: 300px" value="<?php echo getValue('email'); ?>" /></p>
+					<p><label for="postal">Postal Address: <span class="red">*</span></label><br />
+					<textarea name="postal" style="width: 300px; height: 100px;"><?php echo getValue('postal'); ?></textarea></p>
+					<br /><br />
+					<p>Choose your method of payment: <span class="red">*</span></p>
+					<div>
+					<p><input type="radio" name="payment" value="cheque" <?php if ( getValue('cheque') ) { echo "checked='checked'"; } ?> />
+					<b>Cheque.</b> Send a cheque to:</p>
+					<p><i>Adventure Forest<br />4, Huanui Rd<br />Glenbervie<br />0173 Whangarei</i></p>
+					</div>
+					<div>
+					<p><input type="radio" name="payment" value="direct" <?php if ( getValue('direct') ) { echo "checked='checked'"; } ?> />
+					<b>Direct Banking.</b> Our bank details will be sent to you by email.</p>
+					</div>
+					<br />
+					<p>Human Verification: Please enter the two words in the image below. <span class="red">*</span>
+					<br /><small>You can also get an audio challenge, <a href="http://api.recaptcha.net/noscript?k=<?php echo $publickey; ?>&is_audio=True" target="recaptcha_noscript" id="audio_recaptcha_link">click here.</a></small></p>
+					<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=<?php echo $publickey; ?>"></script>
+					<noscript>
+						<iframe id="recaptcha_noscript" name="recaptcha_noscript" src="http://api.recaptcha.net/noscript?k=<?php echo $publickey; ?>" height="300" width="500" frameborder="0"></iframe><br />
+						<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+						<input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+					</noscript>		
+					
+					<input type="hidden" name="mail" value="send" />
+					<br />
+					<input type="submit" value="Order" onclick="window.scrollTo(0,0);" />
+					<p>After ordering, an email will be sent to you for reference.</p>
+				</form>
+<?php } else { ?>
+				<pre>
+<?php echo $display; ?>
+				</pre>
+<?php } ?>
+			</div>
+		<div id="layout-foot">&nbsp;</div>
+</div>
+<?php include("../footer.php"); ?>
+</body>
+</html>

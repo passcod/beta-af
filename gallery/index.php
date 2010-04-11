@@ -1,0 +1,1 @@
+﻿<?php require("/data/home/adventur/public_html/404.shtml"); ?>

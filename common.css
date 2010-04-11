@@ -1,0 +1,142 @@
+﻿/* GALLERY SPECIFIC */
+
+#gallery #layout-left, #gallery #layout-center {
+	background-image: url('images/bg_gallery.jpg');
+	background-repeat: repeat-x;
+	background-color: rgb(40, 29, 25);
+}
+
+#gallery-group {
+	width: 200px;
+/*	height: 500px; */
+	color: rgb(248, 248, 248);
+	background-color: rgb(40, 29, 25);
+	direction: ltr;
+	border: 0px;
+}
+
+#gallery-group .thumbs-sidebar {
+	height: 100px;
+}
+
+/* BACKGROUND COLORS */
+
+body {
+	background-color: #293828;
+}
+
+#layout-page {
+	background-color: rgb(181, 156, 99);
+}
+#layout-center.withsidebar {
+	background-image: url(images/layout-center-background.jpg);
+	background-repeat: repeat-y;
+}
+#layout-left {
+	background-color: rgb(124, 105, 49);
+	margin-right: 10px;
+	background-image: url(images/bg_body.jpg);
+	padding: 0 10px;
+	}
+
+#layout-foot {
+	background-color: #283929;
+	}
+
+
+/* Basic Layout - CONTAINERS */
+
+#layout-page {
+	width:800px;
+	margin:0 auto;
+
+	-moz-box-shadow: 2px 2px 5px #111;
+	-webkit-box-shadow: 2px 2px 5px #111;
+	box-shadow: 2px 2px 5px #111;
+}
+#layout-head {
+	}
+#layout-breadcrumb {
+	height: 30px;
+	}
+#layout-left {
+	float:left;
+	width:200px;
+	}
+/*#layout-center {
+	width: 590px;
+	float: right;
+	}*/
+#layout-foot {
+	clear:both;
+	height: 0px;
+	}
+#layout-bottom {
+	margin: 10px auto;
+	text-align: center;
+	font-size: x-small;
+}
+	
+/* Basic Layout - HEAD TABLE */
+
+#table-head {
+	width: 800px;
+}
+#cell-1-head {
+	width: 364px; height: 200px;
+}
+#cell-2-head {
+	width: 436px; height: 120px;
+}
+#cell-3-head {
+	width: 436px; height: 80px;
+}
+
+/* Basic Layout - BREADCRUMB TABLE */
+
+#table-breadcrumb {
+	width: 800px;
+	height: 30px;
+}
+#table-breadcrumb td {
+	width: 133px;
+}
+
+/* Basic Formatting */
+
+body {
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+	color: #293828;
+	font-weight: bold;
+	font-size: medium;
+}
+
+h1 {
+	color: #293828;
+}
+
+#layout-center {
+	font-size: small;
+}
+
+a {
+	text-decoration: underline;
+	color: rgb(240, 170, 49);
+}
+
+#layout-center a {
+	color: #283929;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	border-width: 0px;
+}
+

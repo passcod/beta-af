@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="en-us" />
+<title>Adventure Forest - Authentication Required</title>
+<script type="text/javascript" src="breadcrumb.js"></script>
+<link rel="stylesheet" href="common.css" />
+</head>
+
+<body>
+
+<div id="layout-page">
+	<div id="layout-head">
+		<table id="table-head" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td id="cell-1-head" rowspan="2"><a href="gallery.php"><img alt="header_gallery" src="images_header/header_01.gif" width="364" height="200" /></a></td>
+				<td id="cell-2-head"><a href="location.php"><img alt="header_location" src="images_header/header_02.gif" width="436" height="120" /></a></td>
+			</tr>
+			<tr>
+				<td id="cell-3-head"><a href="index.php"><img alt="header_index" src="images_header/header_03.gif" width="436" height="80" /></a></td>
+			</tr>
+		</tbody></table>
+	</div><a id="Top"></a>
+	<div id="layout-breadcrumb">
+		<table id="table-breadcrumb" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td><a href="index.php"><img alt="Link to Index" src="images_nav/button_01.gif" onmouseover="breadcrumb('button-1', false, true)" onmouseout="breadcrumb('button-1', false, false)" id="button-1" width="133" height="30" /></a></td>
+				<td><a href="gallery.php"><img alt="Link to Gallery" src="images_nav/button_02.gif" onmouseover="breadcrumb('button-2', false, true)" onmouseout="breadcrumb('button-2', false, false)" id="button-2" width="133" height="30" /></a></td>
+				<td><a href="location.php"><img alt="Link to Location" src="images_nav/button_03.gif" onmouseover="breadcrumb('button-3', false, true)" onmouseout="breadcrumb('button-3', false, false)" id="button-3" width="133" height="30" /></a></td>
+				<td><a href="safety.php"><img alt="Link to Safety" src="images_nav/button_04.gif" onmouseover="breadcrumb('button-4', false, true)" onmouseout="breadcrumb('button-4', false, false)" id="button-4" width="133" height="30" /></a></td>
+				<td><a href="pricing.php"><img alt="Link to Pricing" src="images_nav/button_05.gif" onmouseover="breadcrumb('button-5', false, true)" onmouseout="breadcrumb('button-5', false, false)" id="button-5" width="133" height="30" /></a></td>
+				<td><a href="activities.php"><img alt="Link to Activities" src="images_nav/button_06.gif" onmouseover="breadcrumb('button-6', false, true)" onmouseout="breadcrumb('button-6', false, false)" id="button-6" width="133" height="30" /></a></td>
+			</tr>
+		</tbody></table>
+	</div>
+	<div id="layout-left">
+	</div>
+	<div id="layout-center" style="padding: 20px;">
+		<h1>Hmm, you need a password to get through there.</h1>
+		<h2>If you do not have the authorization to enter this zone, scamper!</h2>
+		<h3>Else, retry, and if the problem persists, contact an administrator.</h3>
+		<small>
+		<br /><br />
+		Referring URL: <!--#echo var="HTTP_REFERER" -->
+		<br />
+		Your IP : <!--#echo var="REMOTE_ADDR" -->
+		<br />
+		Requested URL : <!--#echo var="REQUEST_URI" -->
+		<br />
+		Server Name : <!--#echo var="HTTP_HOST" -->
+		<br />
+		Your Browser : <!--#echo var="HTTP_USER_AGENT" -->
+		<br />
+		Redirect Status Code : <!--#echo var="REDIRECT_STATUS" -->
+		</small>
+	</div>
+	<div id="layout-foot">&gt;<a href="#Top">Top</a>&lt;<br /> 
+		<br /> 
+		[<a href="index.php">home</a>] - [<a href="gallery.php">gallery</a>] - [<a href="location.php">location</a>] - [<a href="safety.php">safety</a>] - [<a href="pricing.php">pricing</a>] - [<a href="activities.php">activities</a>]  - [<a href="calendar.php">calendar</a>]
+	</div>
+</div>
+
+</body>
+
+</html>

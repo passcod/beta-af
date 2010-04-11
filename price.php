@@ -1,0 +1,1 @@
+﻿<?php header("Location: http://www.adventureforest.co.nz/pricing.php"); ?>
